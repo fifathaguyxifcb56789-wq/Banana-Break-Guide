@@ -1,45 +1,82 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <title>กล้วยเบรคแตก</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fffbe6;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      color: #ff9800;
-    }
-    .box {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 500px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .price {
-      font-size: 20px;
-      color: #e91e63;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>กล้วยเบรคแตก</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff6e5;
+}
+
+/* ส่วนรูปใหญ่ด้านบน */
+.hero {
+  position: relative;
+  height: 60vh;
+  background: url('banana.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* กล่องข้อความทับรูป */
+.hero-content {
+  background: rgba(255,255,255,0.85);
+  padding: 30px 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* โลโก้ */
+.logo {
+  font-size: 48px;
+}
+
+/* ชื่อร้าน */
+.hero-content h1 {
+  margin: 10px 0;
+  color: #ff9800;
+}
+
+/* ราคา */
+.price {
+  color: #e91e63;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ส่วนล่าง */
+.box {
+  background: #fff;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="box">
-    <h1>🍌 กล้วยเบรคแตก</h1>
+<!-- รูป + โลโก้ -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="logo">🍌</div>
+    <h1>กล้วยเบรคแตก</h1>
     <p>กรอบ หอม อร่อย ทอดสดใหม่ทุกวัน</p>
-
-    <p class="price">ถุงละ 20 บาท<br>3 ถุง 50 บาท</p>
-
-    <p>
-      📞 โทรสั่ง: 08x-xxx-xxxx<br>
-      💬 LINE: @banana
-    </p>
+    <div class="price">ถุงละ 20 บาท | 3 ถุง 50 บาท</div>
   </div>
+</div>
+
+<!-- ข้อมูลติดต่อ -->
+<div class="box">
+  <p>📞 โทรสั่ง: 08x-xxx-xxxx</p>
+  <p>💬 LINE: @banana</p>
+</div>
 
 </body>
 </html>
