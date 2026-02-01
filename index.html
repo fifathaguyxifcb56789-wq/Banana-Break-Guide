@@ -11,50 +11,111 @@ body {
   background: #fff6e5;
 }
 
-/* ส่วนรูปใหญ่ด้านบน */
+/* ===== HERO ===== */
 .hero {
   position: relative;
-  height: 60vh;
+  height: 70vh;
   background: url('banana.jpg') center/cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.15));
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 420px;
+}
+
+.logo {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
 }
 
-/* กล่องข้อความทับรูป */
-.hero-content {
-  background: rgba(255,255,255,0.85);
-  padding: 30px 40px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+.logo img {
+  width: 60px;
 }
 
-/* โลโก้ */
-.logo {
-  font-size: 48px;
-}
-
-/* ชื่อร้าน */
 .hero-content h1 {
+  font-size: 42px;
   margin: 10px 0;
-  color: #ff9800;
 }
 
-/* ราคา */
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
 .price {
-  color: #e91e63;
-  font-size: 20px;
+  color: #ffd54f;
+  font-size: 22px;
   font-weight: bold;
 }
 
-/* ส่วนล่าง */
+/* ปุ่ม */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 22px;
+  background: #ff9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #f57c00;
+}
+
+/* ===== MENU ===== */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 15px;
+  text-align: center;
+}
+
+/* ===== CONTACT ===== */
 .box {
-  background: #fff;
+  background: white;
   max-width: 500px;
-  margin: 30px auto;
+  margin: 0 auto 40px;
   padding: 25px;
-  border-radius: 12px;
+  border-radius: 14px;
   text-align: center;
 }
 </style>
@@ -62,19 +123,38 @@ body {
 
 <body>
 
-<!-- รูป + โลโก้ -->
+<!-- HERO -->
 <div class="hero">
   <div class="hero-content">
-    <div class="logo">🍌</div>
-    <h1>กล้วยเบรคแตก</h1>
+    <div class="logo">
+      <img src="logo.png" alt="logo">
+      <h1>กล้วยเบรคแตก</h1>
+    </div>
     <p>กรอบ หอม อร่อย ทอดสดใหม่ทุกวัน</p>
-    <div class="price">ถุงละ 20 บาท | 3 ถุง 50 บาท</div>
+    <div class="price">ถุงละ 35 บาท | 3 ถุง 100 บาท</div>
+    <a class="btn" href="https://line.me/ti/p/@banana">สั่งเลยทาง LINE</a>
   </div>
 </div>
 
-<!-- ข้อมูลติดต่อ -->
+<!-- MENU -->
+<div class="menu">
+  <div class="card">
+    <img src="menu1.jpg">
+    <h3>สูตรดั้งเดิม</h3>
+  </div>
+  <div class="card">
+    <img src="menu2.jpg">
+    <h3>น้ำผึ้ง</h3>
+  </div>
+  <div class="card">
+    <img src="menu3.jpg">
+    <h3>งาดำ</h3>
+  </div>
+</div>
+
+<!-- CONTACT -->
 <div class="box">
-  <p>📞 โทรสั่ง: 08x-xxx-xxxx</p>
+  <p>📞 โทรสั่ง: 061-284-8385</p>
   <p>💬 LINE: @banana</p>
 </div>
 
